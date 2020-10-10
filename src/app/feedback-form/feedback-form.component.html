@@ -1,0 +1,32 @@
+<h1>Welcome to Form Controls</h1>
+<!-- <h2>{{ name.value }}</h2> -->
+
+<form [formGroup]="userDataForm" (ngSubmit) = "onSubmit()" >
+  
+  <label>
+    Name:
+    <input type="text" formControlName="name">
+  </label>
+
+  <label>
+    Email
+    <input type="text" formControlName="email">
+  </label>
+
+  <label>
+    Feedback
+    <input type="radio" formControlName="feedback" value="great">Great
+    <input type="radio" formControlName="feedback" value="Okay">Ok
+    <input type="radio" formControlName="feedback" value="Not good">Not Good
+  </label>
+  
+  <label>
+    Comment
+    <input type="text" formControlName="comment">
+  </label>
+
+  <button type="submit">
+  	Submit
+  </button>
+</form>
+<h1>{{respCode}}</h1>
