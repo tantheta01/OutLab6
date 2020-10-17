@@ -1,7 +1,8 @@
+<h1>Hi Botoo</h1>
 <h1>Welcome to Form Controls</h1>
 <!-- <h2>{{ name.value }}</h2> -->
 
-<form [formGroup]="userDataForm" (ngSubmit) = "onSubmit()" >
+<form [formGroup]="userDataForm" (ngSubmit) = "postData()" >
   
   <label>
     Name:
@@ -29,4 +30,8 @@
   	Submit
   </button>
 </form>
+
 <h1>{{respCode}}</h1>
+
+<div *ngIf= "respCode===1"><p>Hurray Form Submitted</p></div>
+<div *ngIf= "respCode==-1"><p>Lol Some other day</p></div>

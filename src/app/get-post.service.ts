@@ -63,7 +63,7 @@ export class GetPostService {
     return this.http.get(this.geturl, httpOptions);
     
   }
-  public postdata(): Observable<any> {
-  	return this.http.post(this.posturl, {"name": "saurav", "email": "sauravgarg@cse.iitb.ac.in", "feedback": "Okay", "comment": "This field can be empty :)"}, httpOptions)
+  public postdata(name: string, email: string, feedback: string, comment: string): Observable<any> {
+  	return this.http.post(this.posturl, {"name": name, "email": email, "feedback": feedback, "comment": comment}, httpOptions)
   }
 }

@@ -9,7 +9,8 @@ import { GetPostService } from '../get-post.service';
 })
 export class FeedbackFormComponent implements OnInit {
 
-	respCode: number = 0;
+	respCode: number=0;
+  // verts: number=4;
 	userDataForm = new FormGroup({
     name: new FormControl('', [
     	Validators.required, Validators.minLength(4)]),
@@ -37,14 +38,21 @@ export class FeedbackFormComponent implements OnInit {
   }
 
   postData(): void{
-  	this.getpost.postdata().subscribe(ans => {
-  		this.respCode = ans.status;
-  	})
+  	this.getpost.postdata(this.userDataForm.controls['name'].value, this.userDataForm.controls['email'].value, this.userDataForm.controls['feedback'].value, this.userDataForm.controls['comment'].value).subscribe({
+      next: ans => {
+        this.respCode = 1;
+      }, 
+      error:error => {
+        this.respCode=-1;
+        // this.respCode = error.error.email;
+        console.log(error);
+      }
+    })
   }
   ngOnInit(): void {
   	
   		this.getData();
-  		this.postData();
+  		// this.postData();
   		// this.up	dateName();	
   }
 
