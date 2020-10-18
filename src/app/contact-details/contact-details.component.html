@@ -1,7 +1,35 @@
-<div class="parent">
-	<p class="person"><span>Person1</span>Liza Dahiya</p>
-	<p class="email"><span>Email1</span>lizadahiya69@cse.iitb.ac.in</p>
-	<br>
-	<p><span>Person2</span>Tanay Sharma</p>
-	<p><span>Email2</span>sharmatanay@cse.iitb.ac.in</p>
-</div>
+<mat-grid-list cols="2" rowHeight="1:1">
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Liza Dahiya</mat-card-title>
+        <mat-card-subtitle
+          >190050063 | lizadahiya01@gmail.com</mat-card-subtitle
+        >
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="../../assets/Liza.jpg"
+        alt="Liza Dahiya"
+        max-width="10%"
+      />
+      <mat-card-content>
+        <p>Work ethics are what define you!</p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Tanay Sharma</mat-card-title>
+        <mat-card-subtitle>190050122 | grettanay@gmail.com</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="../../assets/Tanay.jpeg" alt="Tanay Sharma" />
+      <mat-card-content>
+        <p>Meri description bhi likh dena kuch</p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

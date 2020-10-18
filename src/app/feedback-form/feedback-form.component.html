@@ -1,37 +1,49 @@
-<h1>Hi Botoo</h1>
-<h1>Welcome to Form Controls</h1>
+<div class="form-heading">
+  <h1>Welcome to Form Controls</h1>
+</div>
 <!-- <h2>{{ name.value }}</h2> -->
 
-<form [formGroup]="userDataForm" (ngSubmit) = "postData()" >
-  
+<form [formGroup]="userDataForm" (ngSubmit)="postData()">
   <label>
-    Name:
-    <input type="text" formControlName="name">
+    Name
+    <input
+      type="text"
+      placeholder="Please enter your name"
+      formControlName="name"
+    />
   </label>
+  <br />
 
   <label>
     Email
-    <input type="text" formControlName="email">
+    <input
+      type="text"
+      placeholder="Please enter your email"
+      formControlName="email"
+    />
   </label>
+  <br />
 
   <label>
     Feedback
-    <input type="radio" formControlName="feedback" value="great">Great
-    <input type="radio" formControlName="feedback" value="Okay">Ok
-    <input type="radio" formControlName="feedback" value="Not good">Not Good
+    <input type="radio" formControlName="feedback" value="great" />Great
+    <input type="radio" formControlName="feedback" value="Okay" />Ok 
+    <input type="radio" formControlName="feedback" value="Not good" />Not Good
+    <br />
   </label>
-  
-  <label>
-    Comment
-    <input type="text" formControlName="comment">
-  </label>
+  <br />
 
-  <button type="submit">
-  	Submit
-  </button>
+    <mat-form-field class="example-full-width">
+    <mat-label>Leave a comment</mat-label>
+    <textarea formControlName="comment" matInput placeholder="Ex. It makes me feel..."></textarea>
+  </mat-form-field>
+  <br />
+
+  <button type="submit">Submit</button>
 </form>
+<br />
 
-<h1>{{respCode}}</h1>
-
-<div *ngIf= "respCode===1"><p>Hurray Form Submitted</p></div>
-<div *ngIf= "respCode==-1"><p>Lol Some other day</p></div>
+<div *ngIf="respCode === 1"><h4>Form Submitted Successfully!</h4></div>
+<div *ngIf="respCode == -1">
+  <h4>Some error occured. Please try once again!</h4>
+</div>

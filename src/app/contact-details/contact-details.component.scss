@@ -1,10 +1,27 @@
-.parent {
-	position: relative;
-	bottom: 0%;
-	background-color: blue;
-
+.example-header-image {
+  background-image: "../../assets/icon.png";
+  background-size: cover;
 }
 
-.person {
-	color: red;
+mat-card {
+  font-family: "Times New Roman";
+  text-align: center;
+}
+
+mat-card-title {
+  text-align: center;
+  font-weight: 600;
+  text-align: center;
+  color: #bf360c;
+}
+
+mat-card-subtitle {
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  color: #d84315;
+}
+
+img {
+  width: 500px;
 }

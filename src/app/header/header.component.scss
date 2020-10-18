@@ -1,0 +1,21 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  background-color: #ff9e80;
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 600;
+}
+
+mat-icon {
+  color: #bf360c;
+  background-color: transparent;
+}
+
+button {
+    background-color: #ff9e80;
+    border: none;
+    margin-left: 1ex;
+}

@@ -4,11 +4,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+// import { MDBBootstrapModule } from 'angular-bootstrap-md';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { MatToolbarModule } from '@angular/material/toolbar'; 
-// // import { MatIconModule } from '@angular/material/icon';
-import { FeedbackFormComponent } from './feedback-form/feedback-form.component'; 
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import { FeedbackFormComponent } from './feedback-form/feedback-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatGridTileHarness } from '@angular/material/grid-list/testing';
+// import { MatGridListModule } from "@angular/material";
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 // import {NgModule} from '@angular/core';
 // import {A11yModule} from '@angular/cdk/a11y';
@@ -24,7 +28,7 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
 // // import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 // // import {MatButtonModule} from '@angular/material/button';
 // // import {MatButtonToggleModule} from '@angular/material/button-toggle';
-// // import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 // // import {MatCheckboxModule} from '@angular/material/checkbox';
 // // import {MatChipsModule} from '@angular/material/chips';
 // // import {MatStepperModule} from '@angular/material/stepper';
@@ -32,9 +36,8 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
 // // import {MatDialogModule} from '@angular/material/dialog';
 // // import {MatDividerModule} from '@angular/material/divider';
 // // import {MatExpansionModule} from '@angular/material/expansion';
-// // import {MatGridListModule} from '@angular/material/grid-list';
-// import {MatIconModule} from '@angular/material/icon';
-// import {MatInputModule} from '@angular/material/input';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatInputModule} from '@angular/material/input';
 // import {MatListModule} from '@angular/material/list';
 // import {MatMenuModule} from '@angular/material/menu';
 // import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
@@ -64,12 +67,13 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
     ContactDetailsComponent
   ],
   imports: [
+    // MDBBootstrapModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     // BrowserAnimationsModule,
-    // MatIconModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatIconModule,
     // A11yModule,
     // ClipboardModule,
     // CdkStepperModule,
@@ -81,7 +85,7 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
     // MatBottomSheetModule,
     // MatButtonModule,
     // MatButtonToggleModule,
-    // MatCardModule,
+    MatCardModule,
     // MatCheckboxModule,
     // MatChipsModule,
     // MatStepperModule,
@@ -89,9 +93,8 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
     // MatDialogModule,
     // MatDividerModule,
     // MatExpansionModule,
-    // MatGridListModule,
-    // MatIconModule,
-    // MatInputModule,
+    MatGridListModule,
+    MatInputModule,
     // MatListModule,
     // MatMenuModule,
     // MatNativeDateModule,
@@ -108,7 +111,7 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
     // MatSortModule,
     // MatTableModule,
     // MatTabsModule,
-    // MatToolbarModule,
+    MatToolbarModule,
     // MatTooltipModule,
     // MatTreeModule,
     // OverlayModule,

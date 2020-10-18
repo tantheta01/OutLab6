@@ -1,0 +1,61 @@
+div {
+  font-family: "Times New Roman";
+
+  h1 {
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    color: #bf360c;
+  }
+
+  h4 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    color: #dd2c00;
+  }
+}
+
+form {
+  font-family: "Times New Roman";
+  margin-left: 40%;
+  margin-top: 2%;
+  border: thick;
+}
+
+label {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.15px;
+  margin-bottom: 2ex;
+}
+
+input {
+  font-family: "Times New Roman";
+  font-size: 16px;
+  margin-left: 5%;
+  margin-bottom: 2ex;
+}
+
+button {
+  font-family: "Times New Roman";
+  align-self: center;
+  font-size: 16px;
+  font-style: normal;
+  margin-left: 10%;
+}
+
+mat-label {
+  font-family: "Times New Roman";
+}
+
+textarea {
+  font-family: "Times New Roman";
+}
+
+.example-full-width {
+  width:30%;
+}
